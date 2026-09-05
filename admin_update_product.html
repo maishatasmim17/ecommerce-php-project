@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Update Products</title>
+
+   <!-- Font Awesome CDN -->
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+   />
+
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/admin_style1.css" />
+</head>
+<body>
+
+   <!-- Replace this with your actual admin header if needed -->
+   <header class="header">
+      <div class="flex">
+         <div class="logo">Admin <span>Panel</span></div>
+         <nav class="navbar">
+            <a href="#">Dashboard</a>
+            <a href="#">Products</a>
+            <a href="#">Orders</a>
+            <a href="#">Users</a>
+         </nav>
+      </div>
+   </header>
+
+   <section class="update-product">
+      <h1 class="title">Update Product</h1>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+         <!-- Replace the image source with the actual product image -->
+         <img src="images/doll.jpg" alt="Product Image" />
+
+         <!-- Hidden inputs to simulate old image and product id -->
+         <input type="hidden" name="old_image" value="example-product.jpg" />
+         <input type="hidden" name="pid" value="123" />
+
+         <input
+           type="text"
+           name="name"
+           placeholder="Enter product name"
+           required
+           class="box"
+           value="Sample Product Name"
+         />
+         <input
+           type="number"
+           name="price"
+           min="0"
+           placeholder="Enter product price"
+           required
+           class="box"
+           value="1000"
+         />
+         <select name="category" class="box" required>
+            <option selected>sari</option>
+            <option value="sari">sari</option>
+            <option value="bengal">bengal</option>
+            <option value="doll">doll</option>
+            <option value="jewellery">jewellery</option>
+            <option value="poetry">poetry</option>
+            <option value="bag">bag</option>
+            <option value="painting">painting</option>
+         </select>
+         <textarea
+           name="details"
+           required
+           placeholder="Enter product details"
+           class="box"
+           cols="30"
+           rows="10"
+         >Sample details about the product.</textarea>
+         <input
+           type="file"
+           name="image"
+           class="box"
+           accept="image/jpg, image/jpeg, image/png"
+         />
+         <div class="flex-btn">
+            <input
+              type="submit"
+              class="btn"
+              value="Update Product"
+              name="update_product"
+            />
+            <a href="admin_products.html" class="option-btn">Go Back</a>
+         </div>
+      </form>
+   </section>
+
+   <script src="js/script.js"></script>
+</body>
+</html>
